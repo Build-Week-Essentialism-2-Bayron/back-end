@@ -2,4 +2,4 @@
 
 back-end deployed :  https://essential2us.herokuapp.com/ 
 
-# bayron
+# bayrongit commit -m "readme updated
