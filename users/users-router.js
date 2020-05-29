@@ -26,15 +26,15 @@ router.get('/:id', restrict, async (req, res, next) => {
   }
 });
 
-// router.post('/', restrict, (req, res) => {
-//   Users.insert(req.body)
-//       .then(newUser => {
-//           res.status(201).json(newUser);
-//       })
-//       .catch(err => {
-//           res.status(500).json({ errorMessage: "Error creating new user." });
-//       })
-// });
+router.post('/', restrict, (req, res) => {
+  Users.insert(req.body)
+      .then(newUser => {
+          res.status(201).json(newUser);
+      })
+      .catch(err => {
+          res.status(500).json({ errorMessage: "Error creating new user." });
+      })
+});
 
 router.put('/:id', restrict, (req, res) => {
   Users.update(req.params.id, req.body)
