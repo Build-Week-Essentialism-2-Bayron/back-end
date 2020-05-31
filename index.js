@@ -51,6 +51,9 @@ const usersRouter = require('./users/users-router.js');
 server.use('/users', usersRouter);
 const valuesRouter = require('./values/values-router.js');
 server.use('/values', valuesRouter);
+const projectsRouter = require('./projects/projects-router.js');
+server.use('/projects', projectsRouter);
+
 //const logger = (req, res, next) => {
 //  console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}:${moment().format()}`);
 //  next();

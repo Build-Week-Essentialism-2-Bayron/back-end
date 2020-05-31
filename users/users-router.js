@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const Users = require('./users-model.js');
 const restrict = require('../auth/restrict.js');
+
 //const db = require('../data/users.js');
 
 
