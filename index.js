@@ -54,10 +54,10 @@ server.use('/values', valuesRouter);
 const projectsRouter = require('./projects/projects-router.js');
 server.use('/projects', projectsRouter);
 
-//const logger = (req, res, next) => {
-//  console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}:${moment().format()}`);
-//  next();
-//}; //logging http requests
+const logger = (req, res, next) => {
+ console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}:${moment().format()}`);
+ next();
+}; //logging http requests
 
 server.get('/', async (req, res) => {
   try {
@@ -72,4 +72,4 @@ server.get('/', async (req, res) => {
 const port = process.env.PORT || 4000;
 server.listen(port, () => { 
   console.log(`\n*** Server Running on http://localhost:${port} ***\n`)}
-  );
+);

@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const Values = require('./values-model.js');
 const restrict = require('../auth/restrict.js');
-//const db = require('../data/values.js');
+// const db = require('../data/values.js');
 
 
 router.get('/', restrict, (req, res) => {

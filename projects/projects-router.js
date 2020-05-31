@@ -6,7 +6,7 @@ const restrict = require('../auth/restrict.js');
 
 
 router.get('/', restrict, (req, res) => {
-  Values.find()
+  Projects.find()
     .then(projects => {
       res.json(projects);
     })
